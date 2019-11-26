@@ -1,5 +1,8 @@
 {
   "name": "ionicpad",
-  "integrations": {},
+  "integrations": {
+    "cordova": {},
+    "capacitor": {}
+  },
   "type": "angular"
 }
