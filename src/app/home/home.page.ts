@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlertController, NavController } from '@ionic/angular';
 import { Note } from '../interfaces/note';
 import { NotesService } from '../services/notes.service';
-import { Subject } from 'rxjs';
+
 
 @Component({
   selector: 'app-home',
@@ -31,12 +31,19 @@ export class HomePage implements OnInit {
 
          }); */
 
-         this.notesService.load();
+         this.notesService.load().then((notelist) => {
+
+         // console.log('wgat yio fet');
+         // console.log(bDone);
+
+          this.notes = notelist;
+
+         });
 
 
     }
 
-
+    
 
 
 

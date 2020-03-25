@@ -98,7 +98,7 @@ export class NotesService {
   }
 
 
-  load(): Promise<boolean> {
+  load(): Promise<Note[]> {
 
 
     // Return a promise so that we know when this operation has completed
@@ -114,7 +114,9 @@ export class NotesService {
 
         // This allows us to check if the data has been loaded in or not
         this.loaded = true;
-        resolve(true);
+       // resolve(true);
+
+        resolve(this.notes);
 
       });
 
